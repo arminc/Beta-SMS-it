@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>nl.coralic</groupId>
 		<artifactId>Beta-SMS-parent</artifactId>
-		<version>${betasmsVersion}</version>
+		<version>1</version>
 	</parent>
 
 	<groupId>nl.coralic</groupId>
@@ -29,13 +29,13 @@
 			<groupId>nl.coralic</groupId>
 			<artifactId>Beta-SMS</artifactId>
 			<type>apk</type>
-			<version>${project.version}</version>
+			<version>1</version>
 		</dependency>
 		<dependency>
 			<groupId>nl.coralic</groupId>
 			<artifactId>Beta-SMS</artifactId>
 			<type>jar</type>
-			<version>${project.version}</version>
+			<version>1</version>
 		</dependency>
 	</dependencies>
 
