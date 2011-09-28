@@ -78,7 +78,7 @@ public class WizardActivityTest extends ActivityInstrumentationTestCase2<Wizard>
 	assertTrue(solo.searchText("please check your username and password"));
     }
     
-    public void testXPressBackWhileConnecting()
+    public void testPressBackWhileConnecting()
     {
 	solo.enterText((EditText)solo.getView(nl.coralic.beta.sms.R.id.txtUsername), "test");
 	solo.enterText((EditText)solo.getView(nl.coralic.beta.sms.R.id.txtPassword), "test");
