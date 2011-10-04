@@ -9,10 +9,6 @@ import nl.coralic.beta.sms.*;
 public class STEP1_WizardActivityTest extends ActivityInstrumentationTestCase2<Wizard>
 {
     private Solo solo;
-    //TODO: username/password/provider not in the code?
-    private static String username = "";
-    private static String password = "";
-    private static int provider = 31;
 
     public STEP1_WizardActivityTest()
     {
@@ -66,8 +62,7 @@ public class STEP1_WizardActivityTest extends ActivityInstrumentationTestCase2<W
 	assertTrue(solo.searchText("please check your username and password"));
     }
     
-    //TODO: which one is wrong?
-   /* public void testTurnScreenWhileConnecting()
+    public void testTurnScreenWhileConnecting()
     {
 	solo.enterText((EditText)solo.getView(nl.coralic.beta.sms.R.id.txtUsername), "test");
 	solo.enterText((EditText)solo.getView(nl.coralic.beta.sms.R.id.txtPassword), "test");
@@ -87,16 +82,5 @@ public class STEP1_WizardActivityTest extends ActivityInstrumentationTestCase2<W
 	assertTrue(solo.searchText("Verifying account"));
 	solo.goBack();
 	assertTrue(solo.searchText("Username:"));
-    }*/
-    
-    public void testUserPassCorrect()
-    {
-	solo.pressSpinnerItem(0, provider);	
-	solo.enterText((EditText)solo.getView(nl.coralic.beta.sms.R.id.txtUsername), username);
-	solo.enterText((EditText)solo.getView(nl.coralic.beta.sms.R.id.txtPassword), password);
-	solo.clickOnButton("Done");
-	assertTrue(solo.searchText("Verifying account"));
-	solo.sleep(10000);
-	assertEquals("", ((EditText)solo.getView(nl.coralic.beta.sms.R.id.txtUsername)).getText().toString());
     }
 }

@@ -6,12 +6,12 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.widget.EditText;
 import nl.coralic.beta.sms.*;
 
-public class STEP2_Beta_SMSActivityTest extends
+public class STEP3_Beta_SMSActivityTest extends
 	ActivityInstrumentationTestCase2<Beta_SMS>
 {
     private Solo solo;
 
-    public STEP2_Beta_SMSActivityTest()
+    public STEP3_Beta_SMSActivityTest()
     {
 	super("nl.coralic.beta.sms", Beta_SMS.class);
     }
@@ -78,5 +78,5 @@ public class STEP2_Beta_SMSActivityTest extends
     }
     
     //TODO: send sms correct, does the saldo change?
-    //TODO: send sms fail?
+    //TODO: send sms fail? This one can not be automated, robotium does not know if an notification has been send
 }
