@@ -6,15 +6,15 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.widget.EditText;
 import nl.coralic.beta.sms.*;
 
-public class STEP2_WizardActivityValidUserTest extends ActivityInstrumentationTestCase2<Wizard>
+public class S006_WizardActivityTest extends ActivityInstrumentationTestCase2<Wizard>
 {
     private Solo solo;
     //TODO: username/password/provider not in the code?
-    private static String username = "";
-    private static String password = "";
+    private static String username = "testingwbc";
+    private static String password = "wbcwbc123";
     private static int provider = 31;
 
-    public STEP2_WizardActivityValidUserTest()
+    public S006_WizardActivityTest()
     {
 	super("nl.coralic.beta.sms", Wizard.class);
     }
@@ -51,7 +51,7 @@ public class STEP2_WizardActivityValidUserTest extends ActivityInstrumentationTe
 	solo.enterText((EditText)solo.getView(nl.coralic.beta.sms.R.id.txtPassword), password);
 	solo.clickOnButton("Done");
 	assertTrue(solo.searchText("Verifying account"));
-	solo.sleep(10000);
+	solo.waitForDialogToClose(5000);
 	assertEquals("", ((EditText)solo.getView(nl.coralic.beta.sms.R.id.txtUsername)).getText().toString());
     }
 }
