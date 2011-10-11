@@ -10,6 +10,7 @@ public class S003_WizardActivityTest extends WizardActivityTest
 	solo.enterText((EditText)solo.getView(nl.coralic.beta.sms.R.id.txtPassword), "test");
 	solo.clickOnButton("Done");
 	assertTrue(solo.searchText("Verifying account"));
+	solo.waitForDialogToClose(10);
 	assertTrue(solo.searchText("please check your username and password"));
     }
 }

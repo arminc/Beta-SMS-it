@@ -12,7 +12,7 @@ public class S006_WizardActivityTest extends ActivityInstrumentationTestCase2<Wi
     //TODO: username/password/provider not in the code?
     private static String username = "";
     private static String password = "";
-    private static int provider = 31;
+    private static int provider = 34;
 
     public S006_WizardActivityTest()
     {
